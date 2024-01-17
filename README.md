@@ -8,3 +8,4 @@ Here are the technologies that are used in the course:
     - CSS
     - Bootstrap
     - React
+    - JavaScript
