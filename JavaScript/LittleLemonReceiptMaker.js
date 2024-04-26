@@ -34,7 +34,7 @@ function getPrices(taxBoolean) {
             return;
         };
 
-        console.log(`Dish: ${dish.name}`, `Price: $ ${finalPrice}`);
+        console.log(`Dish: ${dish.name}`, `Price: $${finalPrice}`);
     }
 }
 
@@ -51,7 +51,7 @@ function getDiscount(taxBoolean, guests) {
         console.log(`Discount is $` + discount);
         
     } else {
-        console.log("The second argument must be a number between 0 and 30");
+        console.log(`The second argument must be a number between 0 and 30`);
     }
 }
 
