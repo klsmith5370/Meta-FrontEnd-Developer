@@ -54,3 +54,7 @@ function getDiscount(taxBoolean, guests) {
         console.log("The second argument must be a number between 0 and 30");
     }
 }
+
+// Examples
+getDiscount(true, 2)
+getDiscount(false, 10)
