@@ -1,17 +1,39 @@
+const dishData = [
+    {
+        name: "Italian pasta",
+        price: 9.55
+    },
+    {
+        name: "Rice with veggies",
+        price: 8.65
+    },
+    {
+        name: "Chicken with potatoes",
+        price: 15.55
+    },
+    {
+        name: "Vegetarian Pizza",
+        price: 6.45
+    },
+]
+
+const tax = 1.20;
+
 function getPrices(taxBoolean) {
-    for (let i = 0; i > dishData.length; i++) {
+    
+    for (let dish of dishData) {
         let finalPrice;
         if (taxBoolean === true) {
-            dishData[i] * 
+            finalPrice = dish.price * tax;
         }
         else if (taxBoolean === false) {
-            dishData[i] = finalPrice;
+            dish.price = finalPrice;
         }
         else {
-            console.log("You need to pass a boolean to the getPrices call!")
-            return "jump out"
-        }
+            console.log("You need to pass a boolean to the getPrices call!");
+            return;
+        };
 
-        console.log("Dish: ", dishData[i], "Price: $", finalPrice)
+        console.log(`Dish: ${dish.name}`, `Price: $ ${finalPrice}`);
     }
 }
