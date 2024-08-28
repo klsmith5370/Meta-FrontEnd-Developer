@@ -27,7 +27,8 @@ function App() {
     // Implement this function
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     alert("Account created!");
     clearForm();
   };
@@ -41,26 +42,27 @@ function App() {
             <label>
               First name <sup>*</sup>
             </label>
-            <input onChange={setFirstName} />
+            <input placeholder="First name" onChange={setFirstName} />
           </div>
           <div className="Field">
             <label>Last name</label>
-            <input onChange={setLastName} />
+            <input placeholder="Last name" onChange={setLastName} />
           </div>
           <div className="Field">
             <label>
               Email address <sup>*</sup>
             </label>
-            <input onChange={setEmail} />
+            <input placeholder="Email address" onChange={setEmail} />
           </div>
           <div className="Field">
             <label>
               Password <sup>*</sup>
             </label>
-            <input onChange={setPassword} />
+            <input placeholder="Password" onChange={setPassword} />
+
           </div>
           <div className="Field">
-            <label>
+            <label onChange={setRole}>
               Role <sup>*</sup>
             </label>
             <select>
